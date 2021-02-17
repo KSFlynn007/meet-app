@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/meet-app/static/css/main.ae2029e1.chunk.css",
-    "main.js": "/meet-app/static/js/main.dfc485ae.chunk.js",
-    "main.js.map": "/meet-app/static/js/main.dfc485ae.chunk.js.map",
-    "runtime-main.js": "/meet-app/static/js/runtime-main.46ed1267.js",
-    "runtime-main.js.map": "/meet-app/static/js/runtime-main.46ed1267.js.map",
-    "static/js/2.3dc2fcaa.chunk.js": "/meet-app/static/js/2.3dc2fcaa.chunk.js",
-    "static/js/2.3dc2fcaa.chunk.js.map": "/meet-app/static/js/2.3dc2fcaa.chunk.js.map",
-    "static/js/3.d99d8a00.chunk.js": "/meet-app/static/js/3.d99d8a00.chunk.js",
-    "static/js/3.d99d8a00.chunk.js.map": "/meet-app/static/js/3.d99d8a00.chunk.js.map",
+    "main.css": "/meet-app/static/css/main.2e7919c8.chunk.css",
+    "main.js": "/meet-app/static/js/main.0939e687.chunk.js",
+    "main.js.map": "/meet-app/static/js/main.0939e687.chunk.js.map",
+    "runtime-main.js": "/meet-app/static/js/runtime-main.5a77025e.js",
+    "runtime-main.js.map": "/meet-app/static/js/runtime-main.5a77025e.js.map",
+    "static/js/2.6f63d921.chunk.js": "/meet-app/static/js/2.6f63d921.chunk.js",
+    "static/js/2.6f63d921.chunk.js.map": "/meet-app/static/js/2.6f63d921.chunk.js.map",
+    "static/js/3.931ffcf1.chunk.js": "/meet-app/static/js/3.931ffcf1.chunk.js",
+    "static/js/3.931ffcf1.chunk.js.map": "/meet-app/static/js/3.931ffcf1.chunk.js.map",
     "index.html": "/meet-app/index.html",
     "service-worker.js": "/meet-app/service-worker.js",
     "service-worker.js.map": "/meet-app/service-worker.js.map",
-    "static/css/main.ae2029e1.chunk.css.map": "/meet-app/static/css/main.ae2029e1.chunk.css.map",
-    "static/js/2.3dc2fcaa.chunk.js.LICENSE.txt": "/meet-app/static/js/2.3dc2fcaa.chunk.js.LICENSE.txt",
+    "static/css/main.2e7919c8.chunk.css.map": "/meet-app/static/css/main.2e7919c8.chunk.css.map",
+    "static/js/2.6f63d921.chunk.js.LICENSE.txt": "/meet-app/static/js/2.6f63d921.chunk.js.LICENSE.txt",
     "static/media/logo.2d27ead7.svg": "/meet-app/static/media/logo.2d27ead7.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.46ed1267.js",
-    "static/js/2.3dc2fcaa.chunk.js",
-    "static/css/main.ae2029e1.chunk.css",
-    "static/js/main.dfc485ae.chunk.js"
+    "static/js/runtime-main.5a77025e.js",
+    "static/js/2.6f63d921.chunk.js",
+    "static/css/main.2e7919c8.chunk.css",
+    "static/js/main.0939e687.chunk.js"
   ]
 }
