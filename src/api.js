@@ -16,28 +16,23 @@ function setTest () {
   localStorage.setItem('locations', JSON.stringify(locationsX));
 }
 
-window.addEventListener('offline', () => {
-  console.log('it is offline')
-})
 export const getEvents = async () => {
   NProgress.start();
 
   // local host will only show mockData, all other endpoints (gh-pages) will show full api
-  setTest();
-  // if (window.location.href.startsWith('http://localhost')) {
-  //   NProgress.done();
-  //   return mockData;
-  // }
+  if (window.location.href.startsWith('http://localhost')) {
+    NProgress.done();
+    return mockData;
+  }
 
   console.log(navigator);
   // offline ability to load old data
-  // if (!navigator.onLine) {
+  if (!navigator.onLine) {
     console.log('offline!')
     const storedEvents = localStorage.getItem('lastEvents');
     NProgress.done();
     return JSON.parse(storedEvents).events;
-  // }
-
+  }
   const token = await getAccessToken();
 
   if (token) {

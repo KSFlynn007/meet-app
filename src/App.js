@@ -43,7 +43,7 @@ class App extends Component {
       });
     } else {
       this.setState({
-        alertText: 'You are online.'
+        alertText: ''
       })
     }
 
@@ -127,9 +127,7 @@ class App extends Component {
 
 
   render() {
-    let {tokenCheck} = this.state;
-    const {locations, numberOfEvents, events, alertText} = this.state;
-    const showCharts = this.state.showCharts;
+    const {locations, numberOfEvents, events, alertText, tokenCheck, showCharts} = this.state;
 
     return {tokenCheck} === false ? (
       <div className='App'>
@@ -140,7 +138,7 @@ class App extends Component {
         <Navbar variant='dark'  expand='md' fixed='top' className='color-nav'>
           <Navbar.Brand className='brand' href='https://ksflynn007.github.io/meet-app/'>
             Code Club
-            3
+            4
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav'/>
           <Navbar.Collapse>
