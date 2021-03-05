@@ -3,10 +3,15 @@ import React from 'react';
 function Login() {
     return (
         <div className='App'>
-            <h1>Welcome to the Meet App</h1>
-            <h4>
+            <h1 className='loginTitle'>Welcome to Code Club(Meet-App)</h1>
+            <h4 className='loginDescription'>
                 Log in to see upcoming events around the world for full-stack developers
             </h4>
+          <p className='loginDisclosure'>The Meet App is a project given to students who are part of the Full Stack Web Development Course at CareerFoundry. 
+              The intent of creating this app is to learn skills in building a serverless, progressive web application with React using a test-driven development technique. 
+              In addition, it uses the Google Calendar API to fetch upcoming web development events from a calendar that the curriculum team at CareerFoundry have created for 
+              this sole purpose.The login prompt is meant to demonstrate skills in using an API and OAuth2 authentication flow. <strong>This website is purely for educational purposes and has no commercial intent or use.</strong> 
+              Please refer to the privacy policy below if needed. </p>
             <div className='button_cont' align='center'>
                 <div className='google-btn'>
                     <div className='google-icon-wrapper'>

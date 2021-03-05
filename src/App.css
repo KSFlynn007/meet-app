@@ -5,6 +5,13 @@
 /* base pallete color: https://colorhunt.co/palette/93463 */
 
 /* google verification needs */
+.loginDisclosure,
+.loginTitle,
+.loginDescription {
+  color: white;
+  margin: 50px;
+}
+
 .login-button {
   color: #494949;
   text-transform: uppercase;
