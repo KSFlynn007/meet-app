@@ -7,7 +7,7 @@ import NumberOfEvents from './NumberOfEvents';
 import { extractLocations, getEvents, checkToken } from './api';
 import './nprogress.css';
 import Login from './Login';
-import { WarningAlert } from './Alert';
+import { OfflineAlert } from './Alert';
 import {
   ScatterChart,
   Scatter,
@@ -29,7 +29,7 @@ class App extends Component {
       numberOfEvents: 12,
       currentLocation: 'all',
       tokenCheck: false,
-      warningText: '',
+      alertText: '',
       showCharts: true
     }
   }
@@ -39,11 +39,11 @@ class App extends Component {
     // offline warning
     if(!navigator.onLine) {
       this.setState({
-        warningText: 'You are offline and using old search results, the events loaded may not be the most up to date!'
+        alertText: 'You are offline and using old search results, the events loaded may not be the most up to date!'
       });
     } else {
       this.setState({
-        warningText: ''
+        alertText: ''
       })
     }
 
@@ -150,7 +150,7 @@ class App extends Component {
           </Navbar.Collapse>
         </Navbar>
 
-        <WarningAlert text={this.state.warningText}/>
+        <OfflineAlert text={this.state.warningText}/>
 
         <CitySearch 
           locations={locations} 

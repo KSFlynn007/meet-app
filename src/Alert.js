@@ -36,12 +36,12 @@ class ErrorAlert extends Alert {
 }
 
 // no use for this right now, created for later implementation, maybe for offline warning use?
-class WarningAlert extends Alert {
+class OfflineAlert extends Alert {
     constructor(props) {
         super(props);
         this.color = 'orange';
     }
 }
 
-export {InfoAlert, ErrorAlert, WarningAlert};
+export {InfoAlert, ErrorAlert, OfflineAlert};
 
