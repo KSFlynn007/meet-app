@@ -128,6 +128,11 @@ class App extends Component {
     let {tokenCheck} = this.state;
     const {locations, numberOfEvents, events} = this.state;
     const showCharts = this.state.showCharts;
+    if(true) {
+      return (
+        <h1>Hello world</h1>
+      )
+    }
 
     return {tokenCheck} === false ? (
       <div className='App'>
