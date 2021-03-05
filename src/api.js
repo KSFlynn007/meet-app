@@ -95,7 +95,8 @@ export const getAccessToken = async () => {
 export const checkToken = async (accessToken) => {
   try{
     const result = await fetch(`${Config.GOOGLE_API}access_token=${accessToken}`)
-    console.log(result);
+    const resultJSON = await result.json()
+    console.log(result, resultJSON);
     return result;
   } catch(e) {
     console.error(e)
