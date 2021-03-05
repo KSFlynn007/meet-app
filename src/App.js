@@ -43,7 +43,7 @@ class App extends Component {
       });
     } else {
       this.setState({
-        alertText: ''
+        alertText: 'You are online.'
       })
     }
 
@@ -82,6 +82,8 @@ class App extends Component {
       ? await checkToken(accessToken)
       : false;
     this.setState({ tokenCheck: validToken });
+    this.updateEvents();
+
     if(validToken === true) 
       this.updateEvents();
       const searchParams = new URLSearchParams(window.location.search);
@@ -126,7 +128,7 @@ class App extends Component {
 
   render() {
     let {tokenCheck} = this.state;
-    const {locations, numberOfEvents, events} = this.state;
+    const {locations, numberOfEvents, events, alertText} = this.state;
     const showCharts = this.state.showCharts;
 
     return {tokenCheck} === false ? (
@@ -138,7 +140,7 @@ class App extends Component {
         <Navbar variant='dark'  expand='md' fixed='top' className='color-nav'>
           <Navbar.Brand className='brand' href='https://ksflynn007.github.io/meet-app/'>
             Code Club
-            2
+            3
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav'/>
           <Navbar.Collapse>
@@ -151,7 +153,7 @@ class App extends Component {
           </Navbar.Collapse>
         </Navbar>
 
-        <OfflineAlert text={this.state.alertText}/>
+        <OfflineAlert text={alertText}/>
 
         <CitySearch 
           locations={locations} 

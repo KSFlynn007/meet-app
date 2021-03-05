@@ -35,7 +35,6 @@ class ErrorAlert extends Alert {
     }
 }
 
-// no use for this right now, created for later implementation, maybe for offline warning use?
 class OfflineAlert extends Alert {
     constructor(props) {
         super(props);
