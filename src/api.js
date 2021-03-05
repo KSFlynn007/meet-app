@@ -81,26 +81,13 @@ export const getAccessToken = async () => {
   return accessToken;
 }
 
-// original checkToken
-// export const checkToken = async (accessToken) => {
-//   const result = await fetch(
-//     `${Config.GOOGLE_API}access_token=${accessToken}`
-//   )
-//     .then((res) => res.json())
-//     .catch(error => console.log(error))
-
-//   return result;
-// }
-
 export const checkToken = async (accessToken) => {
   try{
     const result = await fetch(`${Config.GOOGLE_API}access_token=${accessToken}`)
-    const resultJSON = await result.json()
-    console.log(result, resultJSON);
     return result;
   } catch(e) {
-    console.error(e)
-    return ''
+      console.error(e)
+      return ''
   }
 
 }
