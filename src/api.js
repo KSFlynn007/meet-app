@@ -24,11 +24,8 @@ export const getEvents = async () => {
     NProgress.done();
     return mockData;
   }
-
-  console.log(navigator);
   // offline ability to load old data
   if (!navigator.onLine) {
-    console.log('offline!')
     const storedEvents = localStorage.getItem('lastEvents');
     NProgress.done();
     return JSON.parse(storedEvents).events;
