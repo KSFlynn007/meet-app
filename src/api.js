@@ -31,12 +31,12 @@ export const getEvents = async () => {
 
   console.log(navigator);
   // offline ability to load old data
-  if (!navigator.onLine) {
+  // if (!navigator.onLine) {
     console.log('offline!')
     const storedEvents = localStorage.getItem('lastEvents');
     NProgress.done();
     return JSON.parse(storedEvents).events;
-  }
+  // }
 
   const token = await getAccessToken();
 

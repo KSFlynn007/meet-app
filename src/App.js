@@ -138,6 +138,7 @@ class App extends Component {
         <Navbar variant='dark'  expand='md' fixed='top' className='color-nav'>
           <Navbar.Brand className='brand' href='https://ksflynn007.github.io/meet-app/'>
             Code Club
+            1
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav'/>
           <Navbar.Collapse>
