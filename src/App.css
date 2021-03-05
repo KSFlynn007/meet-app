@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue);
 @import url(bootstrap/dist/css/bootstrap.min.css);
 
-/* pallete color: https://colorhunt.co/palette/93463 */
+/* base pallete color: https://colorhunt.co/palette/93463 */
 
 /* google verification needs */
 .login-button {
@@ -61,6 +61,7 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .App * {
