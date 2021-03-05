@@ -151,7 +151,7 @@ class App extends Component {
           </Navbar.Collapse>
         </Navbar>
 
-        <OfflineAlert text={this.state.warningText}/>
+        <OfflineAlert text={this.state.alertText}/>
 
         <CitySearch 
           locations={locations} 
