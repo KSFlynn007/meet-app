@@ -16,6 +16,9 @@ function setTest () {
   localStorage.setItem('locations', JSON.stringify(locationsX));
 }
 
+window.addEventListener('offline', () => {
+  console.log('it is offline')
+})
 export const getEvents = async () => {
   NProgress.start();
 
@@ -26,6 +29,7 @@ export const getEvents = async () => {
   //   return mockData;
   // }
 
+  console.log(navigator);
   // offline ability to load old data
   if (!navigator.onLine) {
     console.log('offline!')
