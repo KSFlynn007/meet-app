@@ -21,13 +21,13 @@ function Login() {
                         alt='Google sign-in'
                         />
                     </div>
-                    {/* <a
+                    <a
                     href='https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.readonly&response_type=code&client_id=841717757727-88vckej4dd8ul7sd5u72c8fe47qb999i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2FKSFlynn007.github.io%2Fmeet-app%2F'
                     rel='nofollow noopener'
                     className='btn-text'
                     >
                         <b>Sign in with Google</b>
-                    </a> */}
+                    </a>
                 </div>
             </div>
             <a
