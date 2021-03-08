@@ -98,7 +98,8 @@ class App extends Component {
     this.mounted = true;
     getEvents().then((events) => {
       if(this.mounted) {
-      this.setState({ events, locations: extractLocations(events) });
+      let temp = events.splice(0, this.state.numberOfEvents)
+      this.setState({ events: temp, locations: extractLocations(events) });
       }
     });
   }
@@ -129,7 +130,7 @@ class App extends Component {
   render() {
     const {locations, numberOfEvents, events, alertText, tokenCheck, showCharts} = this.state;
 
-    return {tokenCheck} === false ? (
+    return tokenCheck === false ? (
       <div className='App'>
         <Login />
       </div>
