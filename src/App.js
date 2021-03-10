@@ -64,7 +64,7 @@ class App extends Component {
           currentLocation: location
         });
       });
-    } else {
+    } else if (eventCount) {
       getEvents().then((events) => {
         const locationEvents = 
           currentLocation === 'all'
