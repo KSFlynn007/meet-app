@@ -130,7 +130,7 @@ class App extends Component {
   render() {
     const {locations, numberOfEvents, events, alertText, tokenCheck, showCharts} = this.state;
 
-    return tokenCheck === false ? (
+    return {tokenCheck} === false ? (
       <div className='App'>
         <Login />
       </div>
