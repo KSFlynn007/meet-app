@@ -22,6 +22,7 @@ export const getEvents = async () => {
   // local host will only show mockData, all other endpoints (gh-pages) will show full api
   if (window.location.href.startsWith('http://localhost')) {
     NProgress.done();
+    console.log('return', mockData)
     return mockData;
   }
   // offline ability to load old data

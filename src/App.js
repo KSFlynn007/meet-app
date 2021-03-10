@@ -34,7 +34,7 @@ class App extends Component {
     }
   }
 
-  updateEvents = (location, eventCount) => {
+  updateEvents = (location) => {
 
     // offline warning
     if(!navigator.onLine) {
@@ -50,11 +50,15 @@ class App extends Component {
     const {currentLocation, numberOfEvents} = this.state;
     if (location) {
       getEvents().then((events) => {
+        console.log(location, events)
         const locationEvents = 
           location === 'all'
             ? events
             : events.filter((event) => event.location === location);
         const filteredEvents = locationEvents.slice(0, numberOfEvents);
+
+        console.log(filteredEvents, locationEvents, numberOfEvents);
+
         this.setState({
           events: filteredEvents,
           currentLocation: location
@@ -66,14 +70,21 @@ class App extends Component {
           currentLocation === 'all'
             ? events
             : events.filter((event) => event.location === currentLocation);
-        const filteredEvents = locationEvents.slice(0, eventCount);
+        const filteredEvents = locationEvents.slice(0, this.state.numberOfEvents);
         this.setState({
           events: filteredEvents,
-          numberOfEvents: eventCount
         });
       });
     }
   }
+
+  changedNumberOfEvents = (numberOfEvents) => {
+    // declared new array, spread operator used 
+    const events = [...this.state.events].slice(0, numberOfEvents);
+    this.setState({numberOfEvents, events})
+  }
+
+
 
   async componentDidMount() {
     // google verification PDF task
@@ -130,7 +141,7 @@ class App extends Component {
   render() {
     const {locations, numberOfEvents, events, alertText, tokenCheck, showCharts} = this.state;
 
-    return tokenCheck === false ? (
+    return {tokenCheck} === false ? (
       <div className='App'>
         <Login />
       </div>
@@ -159,7 +170,7 @@ class App extends Component {
           />
         <NumberOfEvents 
           numberOfEvents={numberOfEvents}
-          updateEvents={this.updateEvents}
+          changedNumberOfEvents={this.changedNumberOfEvents}
           />
         
         <div className='data-vis-wrapper'>
@@ -179,7 +190,7 @@ class App extends Component {
 
           {showCharts && (
             <div className='charts-expanded'>
-            <EventGenre events={events} />
+          <EventGenre events={events} />
 
           <ResponsiveContainer height={400}>
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
