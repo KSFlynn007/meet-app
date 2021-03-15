@@ -11,7 +11,7 @@ const config = {
     GET_TOKEN: 'https://ndtbfpup03.execute-api.ca-central-1.amazonaws.com/dev/api/token/',
     GET_EVENTS: 'https://ndtbfpup03.execute-api.ca-central-1.amazonaws.com/dev/api/get-events/',
     GOOGLE_API: `https://www.googleapis.com/oauth2/v1/tokeninfo?`,
-    LOCAL_HOST: 'http://localhost:8080/'
+    LOCAL_HOST: 'http://localhost:3000/'
 }
 
 
